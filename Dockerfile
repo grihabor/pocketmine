@@ -10,4 +10,7 @@ RUN wget -O installer.sh https://get.pmmp.io \
 
 ENV DO_LOOP yes
 
-CMD echo "$(PM_LANG)\ny\ny\n" | bash start.sh
+ARG PM_LANG
+
+CMD echo "$PM_LANG\ny\ny\n" | bash start.sh
+

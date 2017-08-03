@@ -9,4 +9,4 @@ services:
       context: .
       dockerfile: Dockerfile
       args: 
-       - PM_LANG=rus
+        PM_LANG: rus
