@@ -9,7 +9,7 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      - PM_LANG=rus
+      - PM_LANG=eng
     restart: always
     volumes:
      - ~/players:/pocketmine/players
