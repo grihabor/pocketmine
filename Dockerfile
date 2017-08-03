@@ -1,17 +1,13 @@
-FROM library/alpine:3.6
+FROM library/ubuntu:16.04
 MAINTAINER Borodin Gregory <grihabor@mail.ru>
 
 WORKDIR /pocketmine
 
-RUN echo "ipv6" >> /etc/modules
+RUN apt update && apt install -y wget
 
-# RUN apk update \
-#   && apk add ca-certificates wget \
-#   && update-ca-certificates
+RUN wget -O installer.sh https://get.pmmp.io \
+    && /bin/bash installer.sh -r
 
-RUN apk add openssl
+ENV DO_LOOP yes
 
-RUN wget -O installer.sh https://raw.githubusercontent.com/PocketMine/php-build-scripts/master/installer.sh \
-    && bash installer.sh
-
-CMD ["bash", "start.sh"]
+CMD echo "$(PM_LANG)\ny\ny\n" | bash start.sh

@@ -2,9 +2,11 @@ version: "2"
 services:
   pocketmine:
     ports:
-      - "19132:19132"
-      - "19132:19132/udp"
+     - "19132:19132"
+     - "19132:19132/udp"
     image: grihabor/pocketmine
     build:
       context: .
       dockerfile: Dockerfile
+      args: 
+       - PM_LANG=rus
