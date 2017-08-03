@@ -8,5 +8,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args: 
-        PM_LANG: rus
+    environment:
+      - PM_LANG=rus
+    restart: always
+    volumes:
+     - ~/players:/pocketmine/players
+     - ~/worlds:/pocketmine/worlds
+     - ~/resource_packs:/pocketmine/resource_packs
