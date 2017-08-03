@@ -13,5 +13,5 @@ ENV DO_LOOP yes
 COPY server.properties .
 COPY pocketmine.yml .
 
-CMD echo $PM_LANG"\ny\ny\n" | bash start.sh
+CMD bash start.sh
 
