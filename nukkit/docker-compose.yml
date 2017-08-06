@@ -1,0 +1,11 @@
+version: "2"
+services:
+  pocketmine:
+    ports:
+     - "19100:19132"
+     - "19100:19132/udp"
+    image: grihabor/nukkit
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure

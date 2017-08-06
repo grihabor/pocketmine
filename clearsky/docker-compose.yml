@@ -2,16 +2,17 @@ version: "2"
 services:
   pocketmine:
     ports:
-     - "19132:19132"
-     - "19132:19132/udp"
-    image: grihabor/pocketmine
+     - "19111:19132"
+     - "19111:19132/udp"
+    image: grihabor/clearsky
     build:
       context: .
       dockerfile: Dockerfile
     environment:
       - PM_LANG=eng
-    restart: always
+    restart: on-failure
     volumes:
      - ~/players:/pocketmine/players
      - ~/worlds:/pocketmine/worlds
      - ~/resource_packs:/pocketmine/resource_packs
+     - ~/plugins:/pocketmine/plugins
