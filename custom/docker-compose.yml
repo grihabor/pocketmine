@@ -1,0 +1,20 @@
+version: "2"
+services:
+  pocketmine:
+    ports:
+     - "19132:19132"
+     - "19132:19132/udp"
+    image: grihabor/pocketmine
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PM_LANG=eng
+    restart: on-failure
+    volumes:
+     - ~/players:/pocketmine/players
+     - ~/worlds:/pocketmine/worlds
+     - ~/resource_packs:/pocketmine/resource_packs
+     - ~/plugins:/pocketmine/plugins
+    
+    
