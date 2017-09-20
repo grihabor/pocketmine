@@ -16,3 +16,5 @@ services:
      - ~/worlds:/pocketmine/worlds
      - ~/resource_packs:/pocketmine/resource_packs
      - ~/plugins:/pocketmine/plugins
+    
+    
