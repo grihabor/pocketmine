@@ -12,9 +12,9 @@ services:
       - PM_LANG=eng
     restart: on-failure
     volumes:
-     - ~/players:/pocketmine/players
-     - ~/worlds:/pocketmine/worlds
-     - ~/resource_packs:/pocketmine/resource_packs
-     - ~/plugins:/pocketmine/plugins
+     - ../data//players:/pocketmine/players
+     - ../data/worlds:/pocketmine/worlds
+     - ../data/resource_packs:/pocketmine/resource_packs
+     - ../data/plugins:/pocketmine/plugins
     
     

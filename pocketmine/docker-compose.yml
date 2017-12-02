@@ -1,20 +1,19 @@
 version: "2"
 services:
-  pocketmine:
+  pmmp:
     ports:
      - "19132:19132"
      - "19132:19132/udp"
-    image: grihabor/pocketmine
+    image: grihabor/pmmp:latest
     build:
       context: .
       dockerfile: Dockerfile
     environment:
-      - PM_LANG=eng
+     - PM_LANG=eng
     restart: on-failure
     volumes:
-     - ~/players:/pocketmine/players
-     - ~/worlds:/pocketmine/worlds
-     - ~/resource_packs:/pocketmine/resource_packs
-     - ~/plugins:/pocketmine/plugins
-    
+     - "${DIR_PLAYERS}:/pocketmine/players"
+     - "${DIR_WORLDS}:/pocketmine/worlds"
+     - "${DIR_RESOURCE_PACKS}:/pocketmine/resource_packs"
+     - "${DIR_PLUGINS}:/pocketmine/plugins"
     

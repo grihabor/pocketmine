@@ -1,0 +1,7 @@
+version: "3"
+services:
+  pmmp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: grihabor/pmmp:base
