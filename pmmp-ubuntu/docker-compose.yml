@@ -1,0 +1,7 @@
+version: "2"
+services:
+  pmmp:
+    ports:
+     - "19132:19132"
+    image: pocketmine_ubuntu:latest
+    build: .

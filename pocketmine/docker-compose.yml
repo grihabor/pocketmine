@@ -12,8 +12,18 @@ services:
      - PM_LANG=eng
     restart: on-failure
     volumes:
-     - "${DIR_PLAYERS}:/pocketmine/players"
-     - "${DIR_WORLDS}:/pocketmine/worlds"
-     - "${DIR_RESOURCE_PACKS}:/pocketmine/resource_packs"
-     - "${DIR_PLUGINS}:/pocketmine/plugins"
+     - pmmp_players:/pocketmine/players"
+     - pmmp_worlds:/pocketmine/worlds"
+     - pmmp_resource_packs:/pocketmine/resource_packs"
+     - pmmp_plugins:/pocketmine/plugins"
     
+volumes:
+  pmmp_players:
+    external: true
+  pmmp_plugins:
+    external: true
+  pmmp_resource_packs:
+    external: true
+  pmmp_worlds:
+    external: true
+
